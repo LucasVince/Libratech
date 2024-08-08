@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #e6e6e1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header a {
+    color: black;
+    font-size: 15pt;
+}
+
+header div {
+    display: flex;
+    gap: 50px;
+}
+
+main {
+    display: grid;
+
+    height: calc(100vh - 77px);
+
+    grid-template-columns: 100px 1fr;
+
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#side-menu {
+    background-color: #2F343B;
+    
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#side-menu div {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    padding-top: 50px;
+}
+
+#side-menu button {
+    padding: 5px;
+    font-size: 16pt;
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#livros {
+    background-color: #F69C9E;
+    
+    border: none;
+    
+    transition: 0.125s linear;
+}
+
+#livros:hover {
+    background-color: #c27b7c;
+}
+
+
+#alunos {
+    background-color: #4D95CD;
+    
+    border: none;
+    
+    transition: 0.125s linear;
+}
+
+#alunos:hover {
+    background-color: #4485b8;
+}
+
+
+#cadastros {
+    background-color: #A4BF69;
+    
+    border: none;
+    
+    transition: 0.125s linear;
+}
+
+#cadastros:hover {
+    background-color: #809653;
+}
+
+
+#outros {
+    background-color: #D9C252;
+    
+    border: none;
+    
+    transition: 0.125s linear;
+}
+
+#outros:hover {
+    background-color: #ac9a40;
+}
+
+
+#config {
+    background-color: #7472A6;
+    
+    border: none;
+    
+    transition: transform 0.5s cubic-bezier(.25,0,.5,1), background-color 0.5s linear;
+}
+
+#config:hover {
+    background-color: #61608b;
+    transform: rotate(360deg);
+}

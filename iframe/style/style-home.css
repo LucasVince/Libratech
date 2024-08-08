@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: url(../img/bg-home.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+
+    height: 98vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    background-color: #ffffff40;
+
+    width: 750px;
+    height: 200px;
+
+    font-size: 50pt;
+
+    letter-spacing: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 25px 50px #00000040;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: blur 1s cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes blur {
+    from {
+        filter: blur(1000px);
+    }
+
+    to {
+        filter: blur(0px);
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Libratech</title>
+</head>
+<body>
+    <header>
+        <a href="iframe/home.html" target="main-frame">
+            <ion-icon name="logo-ionic" style="font-size: 25pt;"></ion-icon>
+        </a> <!--icone temporario, trocar por um svg ou algo do tipo-->
+        <h1>Libratech</h1>
+        <div>
+            <a href="#">Ajuda</a>
+            <a href="#">Sair</a>
+        </div>
+    </header>
+    <main>
+        <section id="side-menu">
+            <div>
+                <a href="iframe/livros.html" target="main-frame"><button id="livros"><ion-icon name="book"></ion-icon></button></a>
+                <a href="#" target="main-frame"><button id="alunos"><ion-icon name="people"></ion-icon></button></a>
+                <a href="#" target="main-frame"><button id="cadastros"><ion-icon name="add"></ion-icon></button></a>
+                <a href="#" target="main-frame"><button id="outros"><ion-icon name="ellipsis-horizontal"></ion-icon></button></a>
+            </div>
+            <a href="#" target="main-frame"><button id="config"><ion-icon name="settings"></ion-icon></button></a>
+        </section>
+        <iframe src="iframe/home.html" frameborder="0" name="main-frame"></iframe>
+    </main>
+</body>
+</html>
