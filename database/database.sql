@@ -21,3 +21,10 @@ CREATE TABLE alunos (
     tel char(11),
     PRIMARY KEY(id)
 ) DEFAULT CHARSET = utf8;
+
+CREATE TABLE configs(
+    tamanho_fonte int NOT NULL,
+    modo enum('escuro', 'claro') NOT NULL,
+    cor_fonte char(7) NOT NULL,
+    zoom int NOT NULL
+) DEFAULT CHARSET = utf8;
