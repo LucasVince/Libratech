@@ -16,4 +16,4 @@
 
 ## dia 23/08/24
 
-**adcionei o iframe de livros e um sistema simples para adicionar os livros na lista automaticamente, que sera mudado com nodejs para se adabtar ao tamanho da tabela sql, alem de ter mudado de ideia sobre usar php, agora o backend do projeto sera feito cm nodejs para poder usar o electron para trasnformar o site em um app desktop**
+**adcionei o iframe de livros e de alunos e um sistema simples para adicionar os livros e alunos na lista automaticamente, alem de dar uma atualizada na database, que sera mudado com nodejs para se adabtar ao tamanho da tabela sql, alem de ter mudado de ideia sobre usar php, agora o backend do projeto sera feito cm nodejs para poder usar o electron para trasnformar o site em um app desktop.**
