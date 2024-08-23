@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: #cecece;
+}
+
+.livro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 100px;
+
+    box-shadow: 0 2px 0 #acacac;
+
+    transition: 0.025s;
+}
+
+.livro > p {
+    padding-right: 235px;
+}
+
+.livro button {
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    background-color: #4D95CD;
+    color: #cee1ef;
+    font-weight: bolder;
+    transition: 0.025s;
+}
+
+.livro button:hover {
+    background-color: #4485b8;
+}
+
+.livro button:active {
+    background-color: #4D95CD;
+}
+
+.livro_id {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.livro_id > p {
+    font-weight: bolder;
+}
+
+.livro_id ion-icon {
+    font-size: 35pt;
+}
