@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #cecece;
+    background-color: #dadad5;
 }
 
 .livro {
@@ -21,10 +21,6 @@ body {
     box-shadow: 0 2px 0 #acacac;
 
     transition: 0.025s;
-}
-
-.livro > p {
-    padding-right: 235px;
 }
 
 .livro button {

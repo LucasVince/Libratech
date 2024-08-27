@@ -1,4 +1,4 @@
-for (let i = 1; i <= 5000; i++) {
+for (let i = 1; i <= 14000; i++) {
     const main = document.querySelector('main');
     const div = document.createElement('div');
     const div_id = document.createElement('div');

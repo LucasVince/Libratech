@@ -25,12 +25,16 @@ header div {
     gap: 50px;
 }
 
+header h1 {
+    padding-left: 255px;
+}
+
 main {
     display: grid;
 
     height: calc(100vh - 77px);
 
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 140px 1fr;
 
 }
 
@@ -42,7 +46,7 @@ iframe {
 #side-menu {
     background-color: #2F343B;
     
-    padding: 20px;
+    padding: 0px;
     
     display: flex;
     flex-direction: column;
@@ -53,7 +57,7 @@ iframe {
 #side-menu div {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 60px;
 
     padding-top: 50px;
 }
@@ -61,8 +65,8 @@ iframe {
 #side-menu button {
     padding: 5px;
     font-size: 16pt;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
 
     border-radius: 50%;
     
@@ -134,4 +138,44 @@ iframe {
 #config:hover {
     background-color: #61608b;
     transform: rotate(360deg);
+}
+
+#cadastro-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    background-color: #2F343B;
+
+    position: absolute;
+    top: 400px;
+    left: calc(140px + 1%);
+
+    transform: translateY(-50%);
+
+    width: 200px;
+    height: 150px;
+
+    box-shadow: 0 10px 10px black;
+
+    border-radius: 10px;
+
+    transition: .25s;
+}
+
+#cadastro-div button {
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+
+    background-color: #A4BF69;
+
+    transition: 0.25s;
+}
+
+#cadastro-div button:hover {
+    background-color: #809653;
 }
