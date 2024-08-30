@@ -7,20 +7,15 @@
     <link rel="stylesheet" href="style/style-livros.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
-    <script src="script js/loader.js"></script>
-    <script src="script js/livros.js" defer></script>
+    <script src="js/loader.js"></script>
+    <script src="js/livros.js" defer></script>
     <title>livros</title>
 </head>
 <body>
     <main>
-        <!-- <div class="livro">
-            <div class="livro_id">
-                <ion-icon name="book"></ion-icon>
-                <p>0</p>
-            </div>
-            <p>Nome Livro</p>
-            <a href="#"><button>consultar</button></a>
-        </div> -->
+        <div id="search-div">
+            <input type="text" name="search-input" id="search-input"><button id="search"><ion-icon name="search-outline"></ion-icon></button>
+        </div>
     </main>
     <div id="loading-bg">
         <span id="loader"></span>

@@ -11,6 +11,33 @@ body {
     background-color: #dadad5;
 }
 
+#search-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 0;
+
+    box-shadow: 0 2px 0 #acacac;
+}
+
+#search-div input {
+    outline: none;
+    border: none;
+    padding: 10px;
+    width: 50%;
+    border-radius: 30px;
+}
+
+#search-div button {
+    background-color: transparent;
+    border: none;
+    transform: translateX(-30px);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
 .livro {
     display: flex;
     align-items: center;
@@ -25,8 +52,9 @@ body {
 
 .livro button {
     text-decoration: none;
-    padding: 8px;
-    border-radius: 15px;
+    padding: 15px;
+    font-size: 12pt;
+    border-radius: 25px;
     border: none;
     background-color: #F69C9E;
     color: #493233;
