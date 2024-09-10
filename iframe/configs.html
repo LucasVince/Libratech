@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style-configs.css">
     <link rel="stylesheet" href="style/loading.css">
+    <script src="js/modo_escuro.js" defer></script>
     <script src="js/loader.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <label for="font-size">Tamanho da fonte:</label>
-        <input type="number" name="font-size" id="font-size">
-        <br>
-        <label for="font-color">Cor da fonte:</label>
-        <input type="color" name="font-color" id="font-color">
-        <br>
-        <label for="zoom">Zoom:</label>
-        <input type="number" name="zoom" id="zoom">
-        <br>
-        <label for="modo" id="modo-label">Modo Claro:</label>
-        <input type="checkbox" name="modo" id="modo">
-    </div>
+    <main>
+        <h1>
+            Configurações
+        </h1>
+        <div id="configs">
+            <div id="modo_escuro">
+                <p>modo escuro:</p>
+                <input type="checkbox" id="checkboxInput">
+                <label for="checkboxInput" class="toggleSwitch">
+                </label>
+            </div>
+        </div>
+    </main>
     <div id="loading-bg">
         <span id="loader"></span>
     </div>
