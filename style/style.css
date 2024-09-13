@@ -159,6 +159,9 @@ iframe {
     width: 200px;
     height: 150px;
 
+    opacity: 0;
+    pointer-events: none;
+
     box-shadow: 0 10px 10px black;
 
     border-radius: 10px;
