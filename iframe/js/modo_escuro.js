@@ -1,66 +1,78 @@
 window.addEventListener('DOMContentLoaded', () => {
     const switchInput = document.querySelector('#checkboxInput');
+
     const tagMain = document.querySelector('main');
     const tagH1 = document.querySelector('h1');
-    const divsConfig = document.querySelector('#configs div');
-    const tagBody = document.querySelector('body');
+    const configsDiv = document.querySelector('#configs div');
+    
+    const divLivros = document.querySelectorAll('.livro');
 
     const mudarParaModoEscuro = () => {
-        if (tagMain) tagMain.style.backgroundColor = '#2e2e29';
+        if (tagMain) tagMain.style.backgroundColor = '#161718';
         if (tagH1) {
-            tagH1.style.backgroundColor = '#5a5a51';
+            tagH1.style.backgroundColor = '#474a4d';
             tagH1.style.color = 'white';
         }
-        if (divsConfig) {
-            divsConfig.style.backgroundColor = '#5a5a51';
-            divsConfig.style.color = 'white';
+        if (configsDiv) {
+            configsDiv.style.backgroundColor = '#474a4d';
+            configsDiv.style.color = 'white';
         }
-        if (tagBody) tagBody.style.backgroundColor = '#2e2e29';
+        if (divLivros) {
+            console.log(divLivros)
+            divLivros.forEach(el => divLivros[el].style.backgroundColor = '#474a4d');
+        }
     }
-    
+
     const mudarParaModoClaro = () => {
-        if (tagMain) tagMain.style.backgroundColor = '#a9a9a4';
+        if (tagMain) tagMain.style.backgroundColor = '#a7a7a1';
         if (tagH1) {
             tagH1.style.backgroundColor = '#e6e6e1';
             tagH1.style.color = 'black';
         }
-        if (divsConfig) {
-            divsConfig.style.backgroundColor = '#e6e6e1';
-            divsConfig.style.color = 'black';
+        if (configsDiv) {
+            configsDiv.style.backgroundColor = '#e6e6e1';
+            configsDiv.style.color = 'black';
         }
-
-        if (tagBody) tagBody.style.backgroundColor = '#a9a9a4';
+        if (divLivros) {
+            divLivros.forEach(el => divLivros[el].style.backgroundColor = '#dadad5');
+        }
     }
 
-    const switchDelay = () => {
+    const switchChangeDelay = () => {
         switchInput.disabled = true;
-        setTimeout(() => {
-            switchInput.disabled = false;
-        }, 500);
+            setTimeout(() =>{
+                switchInput.disabled = false;
+            }, 500);
     }
 
-    const modoEscuro = () => {
+    const funcModoEscuro = () => {
         if (switchInput.checked) {
-            switchDelay();
+            switchChangeDelay();
             mudarParaModoEscuro();
-            localStorage.setItem('estadoModoEscuro', 'true');
+
+            localStorage.setItem('modoEscuro', 'true');
         } else {
-            switchDelay();
+            switchChangeDelay();
             mudarParaModoClaro();
-            localStorage.setItem('estadoModoEscuro', 'false');
+
+            localStorage.setItem('modoEscuro', 'false');
         }
     }
 
-    if (switchInput) {
-        const modoEscuroSalvo = localStorage.getItem('estadoModoEscuro');
+        const estadoModoEscuro = localStorage.getItem('modoEscuro');
 
-        if (modoEscuroSalvo === 'true') {
-            switchInput.checked = true;
+        if (estadoModoEscuro === 'true') {
+            if (switchInput) {
+                switchInput.checked = true;
+            }
             mudarParaModoEscuro();
         } else {
-            switchInput.checked = false;
+            if (switchInput) {
+                switchInput.checked = false;
+            }
             mudarParaModoClaro();
         }
-        switchInput.addEventListener('change', modoEscuro);
-    }
-});
+        if (switchInput) {
+            switchInput.addEventListener('change', funcModoEscuro);
+        }
+})

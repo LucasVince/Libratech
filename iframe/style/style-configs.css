@@ -8,8 +8,8 @@
 }
 
 main {
-    background-color: #a9a9a4;
-    height: calc(99.85vh - 40px);
+    background-color: #a7a7a1;
+    height: calc(100vh - 40px);
     padding: 20px;
 
     display: flex;

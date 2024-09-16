@@ -7,18 +7,16 @@
     user-select: none;
 }
 
-body {
-    background-color: #dadad5;
-}
-
 #search-div {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     padding: 20px 0;
+    
+    background-color: #dadad5;
 
-    box-shadow: 0 2px 0 #acacac;
+    box-shadow: 0 -2px 0 #acacac;
 }
 
 #search-div input {
@@ -44,6 +42,8 @@ body {
     justify-content: space-around;
 
     height: 100px;
+
+    background-color: #dadad5;
 
     box-shadow: 0 2px 0 #acacac;
 
