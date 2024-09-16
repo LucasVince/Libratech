@@ -48,9 +48,9 @@ body {
     border-radius: 25px;
     border: none;
     background-color: #4D95CD;
-    color: #cee1ef;
+    color: white;
     font-weight: bolder;
-    transition: 0.025s;
+    transition: 0.25s;
 }
 
 .livro button:hover {

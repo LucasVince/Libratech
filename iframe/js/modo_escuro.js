@@ -5,23 +5,28 @@ window.addEventListener('DOMContentLoaded', () => {
     const tagH1 = document.querySelector('h1');
     const configsDiv = document.querySelector('#configs div');
     
-    const TagBodyLivro = document.querySelector('#bodyLivro');
+    const TagBodyLivroAluno = document.querySelector('#bodyLivroAluno');
     const divLivros = document.querySelectorAll('.livro');
     const divSearch = document.querySelector('#search-div');
 
     const mudarParaModoEscuro = () => {
-        if (tagMainConfig) tagMainConfig.style.backgroundColor = '#161718';
+        if (tagMainConfig) {
+            tagMainConfig.style.backgroundColor = '#161718';
+            tagMainConfig.style.transition = '0.25s';
+        }
         if (tagH1) {
             tagH1.style.backgroundColor = '#474a4d';
             tagH1.style.color = 'white';
+            tagH1.style.transition = '0.25s';
         }
         if (configsDiv) {
             configsDiv.style.backgroundColor = '#474a4d';
             configsDiv.style.color = 'white';
+            configsDiv.style.transition = '0.25s';
         }
 
-        if (TagBodyLivro) {
-            TagBodyLivro.style.backgroundColor = '#161718';
+        if (TagBodyLivroAluno) {
+            TagBodyLivroAluno.style.backgroundColor = '#161718';
         }
         if (divLivros) {
             console.log(divLivros)
@@ -34,18 +39,23 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const mudarParaModoClaro = () => {
-        if (tagMainConfig) tagMainConfig.style.backgroundColor = '#a7a7a1';
+        if (tagMainConfig) {
+            tagMainConfig.style.backgroundColor = '#a7a7a1';
+            tagMainConfig.style.transition = '0.25s';
+        }
         if (tagH1) {
             tagH1.style.backgroundColor = '#dadad5';
             tagH1.style.color = 'black';
+            tagH1.style.transition = '0.25s';
         }
         if (configsDiv) {
             configsDiv.style.backgroundColor = '#dadad5';
             configsDiv.style.color = 'black';
+            configsDiv.style.transition = '0.25s';
         }
 
-        if (TagBodyLivro) {
-            TagBodyLivro.style.backgroundColor = '#dadad5';
+        if (TagBodyLivroAluno) {
+            TagBodyLivroAluno.style.backgroundColor = '#dadad5';
         }
         if (divLivros) {
             divLivros.forEach(el => el.style.backgroundColor = '0 2px 0 #acacac');
