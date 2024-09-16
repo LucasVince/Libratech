@@ -7,6 +7,10 @@
     user-select: none;
 }
 
+body {
+    background-color: #dadad5;
+}
+
 #search-div {
     display: flex;
     justify-content: center;
@@ -14,9 +18,7 @@
     
     padding: 20px 0;
     
-    background-color: #dadad5;
-
-    box-shadow: 0 -2px 0 #acacac;
+    box-shadow: 0 2px 0 #acacac;
 }
 
 #search-div input {
@@ -27,23 +29,12 @@
     border-radius: 30px;
 }
 
-#search-div button {
-    background-color: transparent;
-    border: none;
-    transform: translateX(-30px);
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
 .livro {
     display: flex;
     align-items: center;
     justify-content: space-around;
 
     height: 100px;
-
-    background-color: #dadad5;
 
     box-shadow: 0 2px 0 #acacac;
 

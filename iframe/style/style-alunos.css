@@ -29,15 +29,6 @@ body {
     border-radius: 30px;
 }
 
-#search-div button {
-    background-color: transparent;
-    border: none;
-    transform: translateX(-30px);
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
 .livro {
     display: flex;
     align-items: center;
