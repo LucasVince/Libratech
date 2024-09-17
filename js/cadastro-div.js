@@ -4,7 +4,7 @@ const cadastroDiv = document.querySelector('#cadastro-div');
 cadastroDiv.style.opacity = '0';
 cadastroDiv.style.pointerEvents = 'none';
 
-const showDiv = () => {
+btnCadastro.addEventListener('click', () => {
     if (cadastroDiv.style.opacity == '0') {
         cadastroDiv.style.opacity = '100%';
         cadastroDiv.style.pointerEvents = 'all';
@@ -12,6 +12,10 @@ const showDiv = () => {
         cadastroDiv.style.opacity = '0';
         cadastroDiv.style.pointerEvents = 'none';
     }
-}
-
-btnCadastro.addEventListener('click', showDiv);
+    cadastroDiv.addEventListener('mouseleave', () => {
+        if (cadastroDiv.style.opacity == '1') {
+            cadastroDiv.style.opacity = '0';
+            cadastroDiv.style.pointerEvents = 'none';
+        }
+    });
+});
