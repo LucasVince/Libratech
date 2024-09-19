@@ -36,7 +36,7 @@ body {
 
     height: 100px;
 
-    box-shadow: 0 2px 0 #acacac;
+    box-shadow: 0 2px 0 #a7a7a1;
 
     transition: 0.025s;
 }
@@ -61,16 +61,16 @@ body {
     background-color: #F69C9E;
 }
 
-.livro_id {
+.livro-id {
     display: flex;
     align-items: center;
     gap: 35px;
 }
 
-.livro_id > p {
+.livro-id > p {
     font-weight: bolder;
 }
 
-.livro_id ion-icon {
+.livro-id ion-icon {
     font-size: 35pt;
 }

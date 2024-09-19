@@ -12,9 +12,10 @@ for (let i = 1; i <= 100; i++) {
     let divText = document.createTextNode('Aluno');
     let btnText = document.createTextNode('ver perfil');
 
-    div.setAttribute('class', 'livro');
-    div_id.setAttribute('class', 'livro_id');
+    div.setAttribute('class', 'aluno');
+    div_id.setAttribute('class', 'aluno-id');
     icon.setAttribute('name', 'person');
+    link.setAttribute('href', 'aluno_consulta.html');
 
     main.appendChild(div);
     div.appendChild(div_id);

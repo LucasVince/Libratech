@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     
     const TagBodyLivroAluno = document.querySelector('#bodyLivroAluno');
     const divLivros = document.querySelectorAll('.livro');
+    const divAluno = document.querySelectorAll('.aluno');
     const divSearch = document.querySelector('#search-div');
 
     const mudarParaModoEscuro = () => {
@@ -29,9 +30,12 @@ window.addEventListener('DOMContentLoaded', () => {
             TagBodyLivroAluno.style.backgroundColor = '#161718';
         }
         if (divLivros) {
-            console.log(divLivros)
             divLivros.forEach(el => el.style.boxShadow = '0 2px 0 #474a4d');
-            divLivros.forEach(el => el.style.color = 'white');
+            divLivros.forEach(el => el.style.color = '#bbb');
+        }
+        if (divAluno) {
+            divAluno.forEach(el => el.style.boxShadow = '0 2px 0 #474a4d');
+            divAluno.forEach(el => el.style.color = '#bbb');
         }
         if (divSearch) {
             divSearch.style.boxShadow = '0 2px 0 #474a4d';
@@ -60,6 +64,10 @@ window.addEventListener('DOMContentLoaded', () => {
         if (divLivros) {
             divLivros.forEach(el => el.style.backgroundColor = '0 2px 0 #acacac');
             divLivros.forEach(el => el.style.color = 'black');
+        }
+        if (divAluno) {
+            divAluno.forEach(el => el.style.backgroundColor = '0 2px 0 #acacac');
+            divAluno.forEach(el => el.style.color = 'black');
         }
         if (divSearch) {
             divSearch.style.boxShadow = '0 2px 0 #acacac';

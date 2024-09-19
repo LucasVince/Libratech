@@ -13,8 +13,9 @@ for (let i = 1; i <= 100; i++) {
     let btnText = document.createTextNode('consultar');
 
     div.setAttribute('class', 'livro');
-    div_id.setAttribute('class', 'livro_id');
+    div_id.setAttribute('class', 'livro-id');
     icon.setAttribute('name', 'book');
+    link.setAttribute('href', 'livro_consulta.html');
 
     main.appendChild(div);
     div.appendChild(div_id);

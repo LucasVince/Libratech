@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: #a7a7a1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 40pt;
+    padding: 20px;
+    text-align: center;
+}
+
+#dados {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#dados div {
+    background-color: #e6e6e1;
+    padding: 10px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+#livro-emprestado {
+    background-color: #e6e6e1;
+    width: 700px;
+    height: 350px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+#atraso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#atraso button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#renovar {
+    color: white;
+    background-color: #4D95CD;
+    transition: 0.25s;
+}
+
+#renovar:hover {
+    background-color: #3f7aa7;
+}
+
+#bloquear {
+    color: white;
+    background-color: #c01f1f;
+    transition: 0.25s;
+}
+
+#bloquear:hover {
+    background-color: #961818;
+}
+
+#bloquear:disabled {
+    color: #00000040;
+    background-color: #ff000040;
+}

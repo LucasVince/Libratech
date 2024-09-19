@@ -29,19 +29,19 @@ body {
     border-radius: 30px;
 }
 
-.livro {
+.aluno {
     display: flex;
     align-items: center;
     justify-content: space-around;
 
     height: 100px;
 
-    box-shadow: 0 2px 0 #acacac;
+    box-shadow: 0 2px 0 #a7a7a1;
 
     transition: 0.025s;
 }
 
-.livro button {
+.aluno button {
     text-decoration: none;
     padding: 15px;
     font-size: 12pt;
@@ -53,24 +53,24 @@ body {
     transition: 0.25s;
 }
 
-.livro button:hover {
+.aluno button:hover {
     background-color: #336286;
 }
 
-.livro button:active {
+.aluno button:active {
     background-color: #4D95CD;
 }
 
-.livro_id {
+.aluno-id {
     display: flex;
     align-items: center;
     gap: 35px;
 }
 
-.livro_id > p {
+.aluno-id > p {
     font-weight: bolder;
 }
 
-.livro_id ion-icon {
+.aluno-id ion-icon {
     font-size: 35pt;
 }
