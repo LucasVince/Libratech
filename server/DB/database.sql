@@ -4,20 +4,18 @@ USE libratech;
 
 CREATE TABLE livros (
     id int NOT NULL AUTO_INCREMENT,
-    titulo varchar(50) NOT NULL,
-    subtitulo varchar(50),
-    clasificação_indicativa enum('infanto juvenil','encino medio') NOT NULL,
+    nome varchar(50) NOT NULL,
+    classificacao_indicativa enum('infanto juvenil','ensino medio') NOT NULL,
     autor varchar(50) NOT NULL,
-    genero enum('romance', 'ficção'),
+    genero enum('romance', 'ficção', 'fantasia', 'suspense', 'terror', 'aventura', 'historia', 'drama', 'terror') NOT NULL,
     PRIMARY KEY(id)
 );
 
 CREATE TABLE alunos (
     id int NOT NULL AUTO_INCREMENT,
     nome varchar(100) NOT NULL,
-    claificação enum('infanto juvenil','encino medio') NOT NULL,
-    email varchar(75) NOT NULL,
-    endereco varchar(100) NOT NULL,
-    tel char(11),
+    classificacao enum('infanto juvenil','ensino medio') NOT NULL,
+    endereço varchar(100) NOT NULL,
+    tel varchar(15) NOT NULL,
     PRIMARY KEY(id)
 );

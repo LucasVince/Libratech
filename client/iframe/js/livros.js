@@ -15,7 +15,7 @@ for (let i = 1; i <= 100; i++) {
     div.setAttribute('class', 'livro');
     div_id.setAttribute('class', 'livro-id');
     icon.setAttribute('name', 'book');
-    link.setAttribute('href', 'livro_consulta.html');
+    link.setAttribute('href', 'livros_consulta.html');
 
     main.appendChild(div);
     div.appendChild(div_id);

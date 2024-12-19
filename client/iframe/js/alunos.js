@@ -15,7 +15,7 @@ for (let i = 1; i <= 100; i++) {
     div.setAttribute('class', 'aluno');
     div_id.setAttribute('class', 'aluno-id');
     icon.setAttribute('name', 'person');
-    link.setAttribute('href', 'aluno_consulta.html');
+    link.setAttribute('href', 'alunos_consulta.html');
 
     main.appendChild(div);
     div.appendChild(div_id);
