@@ -34,21 +34,26 @@ app.post('/alunos', async (req, res) => {
     }
 });
 
+app.get('/livros', async (req, res) => {
+    try {
+        const livros = await livroModel.findAll();
+        return res.status(200).json({livros: livros});
+    } catch (err) {
+        return res.status(500).json({message: err.message});
+    }
+});
 
 app.post('/livros', async(req, res) => {
     const {nome, autor, classificacao, genero} = req.body;
 
     try{
         if (!nome || !autor || !classificacao || !genero) {
-            return res.status(400).json({message: 'Informações estão faltando!'});
+            return res.status(400).json({message: 'Informações faltando'});
         }
 
         const livro = await livroModel.create({nome, autor, classificacao_indicativa: classificacao, genero})
         
-        return res.status(201).json({
-            message: 'livro cadastrado com sucesso!',
-            livro: livro
-        })
+        return res.status(201).json({message: 'livro cadastrado com sucesso!',livro: livro})
     }catch(err){
         return res.status(500).json({message: err.message})   
     }
