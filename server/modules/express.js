@@ -19,20 +19,41 @@ app.get('/alunos', async (req, res) => {
 });
 
 app.post('/alunos', async (req, res) => {
-    const {name} = req.body;
+    const {nome, idade, turma, endereco, numeroResponsaveis} = req.body;
 
     try {
-        if (!name) {
-            return res.status(400).json({message: 'Invalid username'});
+        if (!nome || !idade || !turma || !endereco || !numeroResponsaveis) {
+            return res.status(400).json({message: 'Informações faltando'});
         }
 
-        const alunos = await alunoModel.create({ name });
+        const aluno = await alunoModel.create({ nome, idade, turma, endereco, tel: numeroResponsaveis });
 
-        return res.status(201).json({message: 'user added successfully', alunos: alunos});
+        return res.status(201).json({message: 'aluno cadastrado com sucesso', aluno: aluno});
     } catch (err) {
         return res.status(500).json( {message: err.message} );
     }
 });
+
+
+app.post('/livros', async(req, res) => {
+    const {nome, autor, classificacao, genero} = req.body;
+
+    try{
+        if (!nome || !autor || !classificacao || !genero) {
+            return res.status(400).json({message: 'Informações estão faltando!'});
+        }
+
+        const livro = await livroModel.create({nome, autor, classificacao_indicativa: classificacao, genero})
+        
+        return res.status(201).json({
+            message: 'livro cadastrado com sucesso!',
+            livro: livro
+        })
+    }catch(err){
+        return res.status(500).json({message: err.message})   
+    }
+});
+
 app.listen(8080, () => {
     console.log('listening on port 8080');
 });

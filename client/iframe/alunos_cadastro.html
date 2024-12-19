@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="style/style-aluno-cadastro.css">
     <link rel="stylesheet" href="style/loading.css">
     <script src="js/modo_escuro.js" defer></script>
+    <script src="js/alunos_cadastro.js" defer></script>
     <script src="js/loader.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <div class="container">
         <h1>Cadastro de Aluno</h1>
-        <form action="#" method="POST">
+        <form method="POST" id="from-cadastro">
             <label for="nome">Nome do Aluno:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite o nome completo do aluno" required>
 
@@ -22,14 +23,13 @@
             <label for="turma">Turma:</label>
             <input type="tel" id="turma" name="turma" placeholder="Digite a turma do aluno">
 
-
             <label for="endereco">Endereço:</label>
             <textarea id="endereco" name="endereco" rows="3" placeholder="Digite o endereço completo" required></textarea>
 
             <label for="responsaveis">Número dos Responsáveis:</label>
             <input type="tel" id="responsaveis" name="responsaveis" placeholder="Digite o telefone do responsaveis (apenas números)" required pattern="\d{10,11}">
             
-            <button type="submit">Cadastrar</button>
+            <button type="submit" id="cadastrar">Cadastrar</button>
         </form>
     </div>
     <div id="loading-bg">

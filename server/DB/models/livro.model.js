@@ -9,13 +9,14 @@ const livroModel = sequelize.define('livro', {
     classificacao_indicativa: {
         type: DataTypes.ENUM('infanto juvenil','ensino medio'),
         allowNull: false,
+        field: 'classificacao_indicativa'
     }, 
     autor: {
         type: DataTypes.STRING,
         allowNull: false,
     },
     genero: {
-        type: DataTypes.ENUM('romance', 'ficção', 'fantasia', 'suspense', 'terror', 'aventura', 'historia', 'drama', 'terror'),
+        type: DataTypes.ENUM('romance', 'ficção', 'fantasia', 'suspense', 'terror', 'aventura', 'historia', 'drama'),
         allowNull: false,
     }
 }, {

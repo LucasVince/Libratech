@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style-livro-cadastro.css">
     <link rel="stylesheet" href="style/loading.css">
+    <script src="js/livros_cadastro.js" defer></script>
     <script src="js/modo_escuro.js" defer></script>
     <script src="js/loader.js" defer></script>
     <title>Document</title>
@@ -12,7 +13,7 @@
 <body>
     <div class="container">
         <h1>Cadastro de Livros</h1>
-        <form action="#" method="POST">
+        <form method="POST" id="from-cadastro">
             <label for="nome">Nome do Livro:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite o nome do livro" required>
 
@@ -26,10 +27,20 @@
                 <option value="ensino-medio">Ensino Médio</option>
             </select>
 
-            <label for="quantidade">Quantidade Disponível:</label>
-            <input type="number" id="quantidade" name="quantidade" min="1" placeholder="Digite a quantidade disponível" required>
+            <label for="genero">Genero:</label>
+            <select id="genero" name="genero" required>
+                <option value="" disabled selected>Selecione o Genero</option>
+                <option value="romance">Romance</option>
+                <option value="ficcao">Ficção</option>
+                <option value="fantasia">Fantasia</option>
+                <option value="suspense">Suspense</option>
+                <option value="aventura">Aventura</option>
+                <option value="historia">Historia</option>
+                <option value="drama">Drama</option>
+                <option value="terror">Terror</option>
+            </select>
 
-            <button type="submit">Cadastrar</button>
+            <button type="submit" id="cadastrar">Cadastrar</button>
         </form>
     </div>
     <div id="loading-bg">

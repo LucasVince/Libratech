@@ -6,11 +6,15 @@ const alunoModel = sequelize.define('aluno', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    classificacao: {
-        type: DataTypes.ENUM('infanto juvenil','ensino medio'),
+    idade: {
+        type: DataTypes.INTEGER,
         allowNull: false
     },
-    endereço: {
+    endereco: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    turma: {
         type: DataTypes.STRING,
         allowNull: false
     },
