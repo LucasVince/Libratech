@@ -11,7 +11,7 @@ const cadastrarAluno = async event => {
 
     const nome = nomeInput.value;
     const idade = idadeInput.value;
-    const turma = turmaInput.value;
+    const turma = turmaInput.value.toUpperCase();
     const endereco = enderecoInput.value;
     const numeroResponsaveis = numeroResponsaveisInput.value;
 
@@ -28,7 +28,6 @@ const cadastrarAluno = async event => {
             throw new Error(data.message);
         }
 
-        alert(data.message);
         console.log(data.message);
         console.log(data.aluno);
 

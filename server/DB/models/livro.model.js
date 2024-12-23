@@ -9,6 +9,7 @@ const livroModel = sequelize.define('livro', {
     classificacao_indicativa: {
         type: DataTypes.ENUM('infanto juvenil','ensino medio'),
         allowNull: false,
+        defaultValue: 'ensino medio',
         field: 'classificacao_indicativa'
     }, 
     autor: {
@@ -18,6 +19,16 @@ const livroModel = sequelize.define('livro', {
     genero: {
         type: DataTypes.ENUM('romance', 'ficção', 'fantasia', 'suspense', 'terror', 'aventura', 'historia', 'drama'),
         allowNull: false,
+    },
+    sinopse: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: 'sinopse não adicionada'
+    },
+    emprestado: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValues: false
     }
 }, {
     tableName: 'livros',

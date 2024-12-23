@@ -21,6 +21,16 @@ const alunoModel = sequelize.define('aluno', {
     tel: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    livro_ID: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        references: {
+            model: 'livro',
+            key: 'id'
+        },
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
     }
     }, {
     tableName: 'alunos',

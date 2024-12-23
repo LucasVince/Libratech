@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style-link-aluno-livro.css">
+    <link rel="stylesheet" href="style/loading.css">
+    <script src="js/link_aluno_livro.js" defer></script>
+    <script src="js/modo_escuro.js" defer></script>
+    <script src="js/loader.js" defer></script>
+</head>
+<body>
+    <main>
+        <form method="post" id="link-aluno-livro-form">
+            <div id="aluno-div">
+                <label for="aluno">Aluno:</label>
+                <select id="aluno" name="aluno">
+                    <option value="" disabled selected>Selecione o aluno</option>
+                </select>
+            </div>
+            <div id="livro-div">
+                <label for="livro">Livro:</label>
+                <select id="livro" name="livro">
+                    <option value="" disabled selected>Selecione o livro</option>
+                </select>
+            </div>
+            <button type="submit">Emprestar livro</button>
+        </form>
+    </main>
+    <div id="loading-bg">
+        <span id="loader"></span>
+    </div>
+</body>
+</html>
