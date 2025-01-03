@@ -18,7 +18,10 @@ const cadastrarAluno = async event => {
     try {
         const response = await fetch('http://localhost:8080/alunos', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json'},
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Origin-Page': 'cadastro alunos'
+            },
             body: JSON.stringify( {nome, idade, turma, endereco, numeroResponsaveis} )
         });
 

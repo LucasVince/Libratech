@@ -24,7 +24,9 @@ if (livro_ID) {
         try {
             const response = await fetch(`http://localhost:8080/livros?livro_ID=${livro_ID}`, {
                 method: 'GET',
-                headers: { 'Content-Type': 'application/json' }
+                headers: {
+                    'Content-Type': 'application/json',
+                }
             });
 
             const data = await response.json();
@@ -33,9 +35,25 @@ if (livro_ID) {
                 throw new Error(data.message);
             }
 
-            console.log(data.livro);
+            const livro = data.livro;
 
-            
+            const divLivro = document.querySelector('#livro-emprestado');
+
+            const h1Nome = document.createElement('p');
+            const h2Autor = document.createElement('p');
+            const pSinopse = document.createElement('p');
+
+            const nome = livro.nome;
+            const autor = livro.autor;
+            const sinopse = livro.sinopse;
+
+            h1Nome.textContent = nome;
+            h2Autor.textContent = autor;
+            pSinopse.textContent = sinopse;
+
+            divLivro.appendChild(h1Nome);
+            divLivro.appendChild(h2Autor);
+            divLivro.appendChild(pSinopse);
         } catch(err) {
             alert(err);
             console.log(err);
@@ -43,6 +61,6 @@ if (livro_ID) {
     };
 }
 
-// window.addEventListener('unload', () => {
-//     localStorage.removeItem('aluno_info');
-// });
+window.addEventListener('unload', () => {
+    localStorage.removeItem('aluno_info');
+});

@@ -30,8 +30,11 @@ app.get('/alunos', async (req, res) => {
             return res.status(200).json({ alunos: alunos });
         }
 
+        const devendoLivro = await alunoModel.findAll({
+            where: {devendo_livro: true}
+        });
         const alunos = await alunoModel.findAll();
-        return res.status(200).json({ alunos: alunos });
+        return res.status(200).json({ alunos: alunos, devendoLivro: devendoLivro });
     } catch (err) {
         console.error('Erro no servidor:', err);
         return res.status(500).json({ error: err.message });

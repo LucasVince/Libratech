@@ -6,17 +6,15 @@ const gerarAlunos = alunos => {
         const icon = document.createElement('ion-icon');
         const p_id = document.createElement('p');
         const p_div = document.createElement('p');
-        const link = document.createElement('a');
         const btn = document.createElement('button');
         
         let id = document.createTextNode(element.id);
         let divText = document.createTextNode(element.nome);
-        let btnText = document.createTextNode('ver perfil');
+        let btnText = document.createTextNode('bloquear');
 
         div.setAttribute('class', 'aluno');
         div_id.setAttribute('class', 'aluno-id');
         icon.setAttribute('name', 'person');
-        link.setAttribute('href', 'alunos_consulta.html');
 
         main.appendChild(div);
         div.appendChild(div_id);
@@ -25,21 +23,39 @@ const gerarAlunos = alunos => {
         p_id.appendChild(id);
         div.appendChild(p_div);
         p_div.appendChild(divText);
-        div.appendChild(link);
-        link.appendChild(btn);
+        div.appendChild(btn);
         btn.appendChild(btnText);
 
-        btn.addEventListener("click", () => localStorage.setItem('aluno_info', JSON.stringify(element)));
+        btn.addEventListener("click", async () => {
+            const id = element.id;
+
+            try {
+                const response = await fetch('http://localhost:8080/alunos', {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ id })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.message);
+                }
+
+                console.log(data.aluno);
+            } catch (err) {
+                alert(err);
+                console.log(err);
+            }
+        });
     });
 }
+
 window.onload = async () => {
-
-    document.querySelectorAll('.aluno').forEach(element => element.remove());
-
     try {
         const response = await fetch('http://localhost:8080/alunos', {
             method: 'GET',
-            headers: {'Content-Type': 'application/json'}
+            headers: { 'Content-Type': 'application/json' } 
         });
 
         const data = await response.json();
@@ -48,14 +64,14 @@ window.onload = async () => {
             throw new Error(data.message);
         }
 
-        const alunos = data.alunos;
+        const devendoLivro = data.devendoLivro;
 
-        gerarAlunos(alunos);
+        gerarAlunos(devendoLivro);
     } catch(err) {
         alert(err);
         console.log(err);
     }
-}
+};
 
 const searchBar = document.querySelector('#search-input');
 
@@ -67,9 +83,7 @@ searchBar.addEventListener('input', async () => {
     try {
         const response = await fetch(`http://localhost:8080/alunos?search=${search}`, {
             method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            }
+            headers: {'Content-Type': 'application/json'}
         });
 
         const data = await response.json();
@@ -78,9 +92,9 @@ searchBar.addEventListener('input', async () => {
             throw new Error(data.message);
         }
 
-        const alunos = data.alunos;
+        const devendoLivro = data.devendoLivro;
 
-        gerarAlunos(alunos);
+        gerarAlunos(devendoLivro);
     } catch(err) {
         alert(err);
         console.log(err);

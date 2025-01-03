@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon index.js"
+    "start:dev": "nodemon  server/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "luxon": "^3.5.0",
     "mysql2": "^3.11.5",
     "sequelize": "^6.37.5"
   }

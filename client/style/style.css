@@ -127,6 +127,17 @@ iframe {
     background-color: #ac9a40;
 }
 
+#alunos-atraso-devolucao {
+    background-color: #e2bbc3;
+    
+    border: none;
+    
+    transition: 0.125s linear;
+}
+
+#alunos-atraso-devolucao:hover {
+    background-color: #e61c48;
+}
 
 #config {
     background-color: #7472A6;
